@@ -1,6 +1,8 @@
+import 'package:doctor_booking_app/shared/widgets/avatars/circle_avatar_with_text_label.dart';
 import 'package:doctor_booking_app/shared/widgets/titles/section_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:models/models.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -121,6 +123,18 @@ class _DoctorCategories extends StatelessWidget {
           title: 'Categories',
           action: 'See all',
           onPressed: () {},
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: DoctorCategory.values
+              .take(5)
+              .map((category) => Expanded(
+                    child: CricleAvatarWithTextLabel(
+                      icon: category.icon,
+                      label: category.name,
+                    ),
+                  ))
+              .toList(),
         ),
       ],
     );
