@@ -1,4 +1,5 @@
 import 'package:doctor_booking_app/shared/widgets/avatars/circle_avatar_with_text_label.dart';
+import 'package:doctor_booking_app/shared/widgets/cards/appointment_preview_card.dart';
 import 'package:doctor_booking_app/shared/widgets/titles/section_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -105,9 +106,62 @@ class HomeView extends StatelessWidget {
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          children: [_DoctorCategories()],
+          children: [
+            _DoctorCategories(),
+            const SizedBox(height: 24.0),
+            _MyShedule(),
+            const SizedBox(height: 24.0),
+            _NearbyDoctors(),
+          ],
         ),
       ),
+    );
+  }
+}
+
+class _NearbyDoctors extends StatelessWidget {
+  const _NearbyDoctors({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Column(
+      children: [
+        SectionTile(
+          title: 'Nearby Doctors,',
+          action: "see all",
+          onPressed: () {},
+        ),
+        const SizedBox(height: 8.0),
+        ListView.separated(
+          physics: const NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          separatorBuilder: (context, index) {
+            return Divider(height: 24.0, color: colorScheme.surfaceVariant);
+          },
+          itemCount: Doctor.sampleDoctors.length,
+          itemBuilder: (context, index) {},
+        ),
+      ],
+    );
+  }
+}
+
+class _MyShedule extends StatelessWidget {
+  const _MyShedule({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SectionTile(
+          title: 'My Shedule',
+          action: 'see all',
+          onPressed: () {},
+        ),
+        AppointmentPreviewCard(),
+      ],
     );
   }
 }

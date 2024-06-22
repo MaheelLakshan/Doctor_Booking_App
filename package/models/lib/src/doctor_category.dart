@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 enum DoctorCategory {
@@ -64,4 +63,6 @@ enum DoctorCategory {
   final IconData icon;
 
   const DoctorCategory({required this.name, required this.icon});
+
+  
 }
