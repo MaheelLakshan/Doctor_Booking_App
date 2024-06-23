@@ -1,5 +1,7 @@
 import 'package:doctor_booking_app/shared/widgets/avatars/circle_avatar_with_text_label.dart';
+import 'package:doctor_booking_app/shared/widgets/bottom_nav_bars/main_nav_bar.dart';
 import 'package:doctor_booking_app/shared/widgets/cards/appointment_preview_card.dart';
+import 'package:doctor_booking_app/shared/widgets/list_tiles/doctor_list_tile.dart';
 import 'package:doctor_booking_app/shared/widgets/titles/section_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -103,18 +105,19 @@ class HomeView extends StatelessWidget {
               ),
             )),
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(8.0),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(8.0),
         child: Column(
           children: [
             _DoctorCategories(),
-            const SizedBox(height: 24.0),
+            SizedBox(height: 24.0),
             _MyShedule(),
-            const SizedBox(height: 24.0),
+            SizedBox(height: 24.0),
             _NearbyDoctors(),
           ],
         ),
       ),
+      bottomNavigationBar: const MainNavBar(),
     );
   }
 }
@@ -141,7 +144,10 @@ class _NearbyDoctors extends StatelessWidget {
             return Divider(height: 24.0, color: colorScheme.surfaceVariant);
           },
           itemCount: Doctor.sampleDoctors.length,
-          itemBuilder: (context, index) {},
+          itemBuilder: (context, index) {
+            final doctor = Doctor.sampleDoctors[index];
+            return DoctorListTile(doctor: doctor);
+          },
         ),
       ],
     );

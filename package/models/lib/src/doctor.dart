@@ -53,7 +53,7 @@ class Doctor extends Equatable {
         name: 'Maheel',
         bio: 'Nice',
         profileImageUrl:
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fhuman%2F&psig=AOvVaw1bfn0VcGFP9nDcQI1UaQqx&ust=1719107471576000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDtt8SM7oYDFQAAAAAdAAAAABAE',
+            'https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg',
         category: DoctorCategory.familyMedicine,
         workingHours: DoctorWorkingHours.sampleDoctorWorkingHours,
         address: DoctorAddress.sampleAddresses[0],
@@ -66,7 +66,7 @@ class Doctor extends Equatable {
         name: 'Lakshan',
         bio: 'Nice',
         profileImageUrl:
-            'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fhuman%2F&psig=AOvVaw1bfn0VcGFP9nDcQI1UaQqx&ust=1719107471576000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNDtt8SM7oYDFQAAAAAdAAAAABAE',
+            'https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg',
         category: DoctorCategory.cardiology,
         workingHours: DoctorWorkingHours.sampleDoctorWorkingHours,
         address: DoctorAddress.sampleAddresses[0],

@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_maps_flutter: ^2.5.3
+  cached_network_image:
 
 dev_dependencies:
   flutter_test:
